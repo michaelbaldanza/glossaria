@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost${db_name}', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
+mongoose.connect('mongodb://127.0.0.1/glossariadb');
+
+const db = mongoose.connection;
+
+db.on('connected', function() {
+  console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
 });
