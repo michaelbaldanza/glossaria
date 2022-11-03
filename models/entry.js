@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const entrySchema = new Schema({
   headword: String,
-  body: String,
+  bodyText: String,
 }, {
   timestamps: true,
 })
