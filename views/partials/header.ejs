@@ -24,24 +24,32 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/lists">
                 Lists
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">View profile</a>
-                </li>
-                <li><div class="dropdown-divider"></div></li>
-                <li>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </li>
-              </ul>
-            </li>
+            <% if (user) { %>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">View profile</a>
+                  </li>
+                  <li><div class="dropdown-divider"></div></li>
+                  <li>
+                    <a class="dropdown-item" href="/logout">Log out</a>
+                  </li>
+                </ul>
+              </li>
+            <% } else { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/google">
+                  Login
+                </a>
+              </li>
+            <% } %>
           </ul>
         </div>
       </div>
     </nav>
-    <main class="container">
+    <main class="container-fluid">

@@ -1,20 +1,15 @@
 <%- include('../partials/header.ejs') %>
-
-<a href="/entries/new">Add an entry</a>
 <div>
+  <a href="/entries/new" class="link-primary text-decoration-none">Add an entry</a>
   <div>
-    <a>
-      peristyle
-    </a>
+    <% for (let i=0; i< entries.length; i++) { %>
+      <div>
+        <a href="/entries/<%= entries[i]._id %>" class="link-dark text-decoration-none">
+          <%= entries[i].headword %>
+          <%= entries[i].id %>
+        </a>
+      </div>
+    <% } %>
   </div>
-  <% for (let i=0; i< entries.length; i++) { %>
-    <div>
-      <a href="/entries/<%= entries[i]._id %>" class="link-dark text-decoration-none">
-        <%= entries[i].headword %>
-      </a>
-    </div>
-  <% } %>
 </div>
-
-
 <%- include('../partials/footer.ejs') %>

@@ -6,6 +6,16 @@ a {
   padding: 50px;
 } */
 
+.link-dark:hover {
+  opacity: 50%;
+}
+
+.entry-heading-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
 @media (min-width: 640px) {
                  
 }

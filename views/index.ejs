@@ -1,4 +1,25 @@
 <%- include('./partials/header.ejs') %>
-<h1>Welcome to <%- title %></h1>
-
+<div>
+  <h1>Welcome to <%- title %></h1>
+  <p>
+    <% if (user) { %>
+      <a href="/logout">
+        Log out
+      </a>
+    <% } else { %>
+      <a href="/auth/google">
+        Login with Google
+      </a>
+    <% } %>
+  </p>
+  <% if (allUsers) { %>
+    <ul>
+      <% for (let i = 0; i < allUsers.length; i++) { %>
+        <li>
+          <%= allUsers[i].name %> - <%= allUsers[i].email %>
+        </li>
+      <% } %>
+    </ul>
+  <% } %>
+</div>
 <%- include('./partials/footer.ejs') %>

@@ -1,8 +1,14 @@
 <%- include('../partials/header.ejs') %>
-
 <div>
-  <h1><%= entry.headword %></h1>
+  <div class="entry-heading-container">
+    <h1><%= entry.headword %></h1>
+    <a class="btn btn-success" href="/entries/<%= entry._id %>/edit">Edit</a>
+    <form action="/entries/<%= entry._id %>?_method=DELETE" method="post">
+      <button class="btn btn-danger">
+        Delete
+      </button>
+    </form>
+  </div>
   <p><%= entry.bodyText %></p>
 </div>
-
 <%- include('../partials/footer.ejs') %>

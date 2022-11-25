@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+<div>
+  <h1><%= list.name %></h1>
+  <div>
+    <% for (i = 0; i < list.entries.length; i++) { %>
+      <div>
+        <%= list.entries[i].headword %>
+      </div>
+    <% } %>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>

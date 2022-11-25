@@ -1,17 +1,21 @@
 <%- include('../partials/header.ejs') %>
-<h3>Add an entry</h3>
-<form action="/entries" method="POST">
-  <div class="mb-3">
-    <label for="headword-input" class="form-label">Headword</label>
-    <input type="text" class="form-control" id="headword-input" type="text" name="headword">
-  </div>
-  <div class="mb-3">
-    <label for="body-input" class="form-label">Body</label>
-    <textarea class="form-control" id="body-input" type="text" name="bodyText"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">
-    Submit
-  </button>
-</form>
-
+<div>
+  <h3><%= entry ? 'Edit' : 'Add' %> an entry</h3>
+    <form action="<%= entry ? `/entries/${entry.id}?_method=PUT` : '/entries' %>" method="POST">
+      <div class="mb-3">
+        <label for="headword-input" class="form-label">Headword</label>
+        <input
+          type="text" class="form-control" id="headword-input" name="headword"
+          value="<%= entry ? entry.headword : '' %>"
+        >
+      </div>
+      <div class="mb-3">
+        <label for="body-input" class="form-label">Body</label>
+        <textarea class="form-control" id="body-input" type="text" name="bodyText"><%= entry ? entry.bodyText : '' %></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </form>
+</div>
 <%- include('../partials/footer.ejs') %>

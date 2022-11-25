@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+<div>
+  <h3>Add a list</h3>
+  <form action="/lists" method="POST">
+    <div class="mb-3">
+      <label for="name-input" class="form-label">Name</label>
+      <input type="text" name="name" class="form-control" id="headword-input">
+    </div>
+    <fieldset>
+      <legend>Add existing entries</legend>
+        <% for (i = 0; i < entries.length; i++) { %>
+          <input
+            type="checkbox"
+            id="<%= entries[i].headword %>"
+            name="entries"
+            value="<%= entries[i].id %>"
+          />
+          <label for="<%= entries[i].headword %>">
+            <%= entries[i].headword %>
+          </label>
+        <% } %>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs') %>

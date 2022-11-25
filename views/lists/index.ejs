@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+<div>
+  <a href="/lists/new" class="link-primrary text-decoration-none">
+    Add a new list.
+  </a>
+  <div>
+    <div>
+      <% for (i = 0; i < lists.length; i++) {%>
+        <a href="/lists/<%= lists[i].id %>" class="link-dark text-decoration-none">
+          <%= lists[i].name %>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>
