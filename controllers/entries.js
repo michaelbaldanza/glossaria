@@ -16,7 +16,7 @@ function deleteEntry(req, res) {
   console.log(`hitting entriesCtrl.delete`);
   Entry.findById(req.params.id, (err, entry) => {
     if (err) console.error(err);
-    entry.deleteOne({}).then(function () {
+    entry.deleteOne({}).then(function() {
       console.log('data deleted');
       res.redirect('/entries');
     }).catch(function(error) {

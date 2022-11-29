@@ -1,6 +1,6 @@
 <%- include('../partials/header.ejs') %>
 <div>
-  <div class="entry-heading-container">
+  <div class="heading-container">
     <h1><%= entry.headword %></h1>
     <a class="btn btn-success" href="/entries/<%= entry._id %>/edit">Edit</a>
     <form action="/entries/<%= entry._id %>?_method=DELETE" method="post">

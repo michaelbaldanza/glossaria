@@ -10,7 +10,7 @@ a {
   opacity: 50%;
 }
 
-.entry-heading-container {
+.heading-container {
   display: flex;
   gap: 1em;
   align-items: center;

@@ -1,10 +1,23 @@
 <%- include('../partials/header.ejs') %>
 <div>
-  <h1><%= list.name %></h1>
+  <div class="heading-container">
+    <h1><%= list.name %></h1>
+    <a class="btn btn-success" href="/lists/<%= list._id %>/edit">Edit</a>
+    <form action="/lists/<%= list._id %>?_method=DELETE" method="post">
+      <button class="btn btn-danger">
+        Delete
+      </button>
+    </form>
+  </div>
   <div>
     <% for (i = 0; i < list.entries.length; i++) { %>
       <div>
-        <%= list.entries[i].headword %>
+        <a
+          href="/entries/<%= list.entries[i].id %>"
+          class="link-dark text-decoration-none"
+        >
+          <%= list.entries[i].headword %>
+        </a>
       </div>
     <% } %>
   </div>

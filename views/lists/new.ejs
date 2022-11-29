@@ -1,23 +1,30 @@
 <%- include('../partials/header.ejs') %>
 <div>
-  <h3>Add a list</h3>
+  <h3><%= list ? `Edit ${list.name}` : 'New list' %></h3>
   <form action="/lists" method="POST">
     <div class="mb-3">
       <label for="name-input" class="form-label">Name</label>
-      <input type="text" name="name" class="form-control" id="headword-input">
+      <input type="text" name="name" class="form-control" id="headword-input"
+        value="<%= list ? list.name : '' %>"
+      >
     </div>
     <fieldset>
-      <legend>Add existing entries</legend>
+      <legend>Which entries do you want to include?</legend>
         <% for (i = 0; i < entries.length; i++) { %>
+        <div>
           <input
             type="checkbox"
-            id="<%= entries[i].headword %>"
+            <% if (list && list.entries.includes(entries[i].id)) { %>
+            checked
+            <% } %>
+            id="<%= entries[i].id %>"
             name="entries"
             value="<%= entries[i].id %>"
           />
           <label for="<%= entries[i].headword %>">
             <%= entries[i].headword %>
           </label>
+        </div>
         <% } %>
     </fieldset>
     <button type="submit" class="btn btn-primary">
