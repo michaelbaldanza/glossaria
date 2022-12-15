@@ -12,8 +12,9 @@ router.delete('/:id', isLoggedIn, entriesCtrl.delete);
 router.put('/:id', isLoggedIn, entriesCtrl.update);
 
 function isLoggedIn(req, res, next) {
+  console.log('hitting entries isLoggedIn');
   if (req.isAuthenticated()) return next();
-  res.redirect('/auth/google');
+  res.redirect('/auth/google' + '?redirect_url=' + req.originalUrl);
 }
 
 module.exports = router;

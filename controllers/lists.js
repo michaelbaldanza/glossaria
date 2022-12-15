@@ -31,15 +31,6 @@ function edit(req, res) {
     if (err) console.error(err);
     Entry.find({}, (err, allEntries) => {
       if (err) console.error(err);
-      console.log('Which entries are already included in the list?');
-      let counter = 0;
-      allEntries.forEach(entry => {
-        counter++;
-        console.log(`looping ${counter}`);
-        if (list.entries.includes(entry.id, 0)) {
-          console.log(entry);
-        }
-      })
       res.render('lists/new', {
         list: list,
         entries: allEntries,
@@ -54,7 +45,6 @@ function index(req, res) {
     if (err) console.error(err);
     Entry.find({}, (err, allEntries) => {
       if (err) console.error(err);
-      console.log(allEntries);
       res.render('lists/index', {
         entries: allEntries,
         lists: allLists,

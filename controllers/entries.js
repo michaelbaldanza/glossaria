@@ -1,4 +1,5 @@
 const Entry = require('../models/entry');
+const api = require('../config/api');
 
 function create(req, res) {
   const entry = new Entry(req.body);
@@ -35,27 +36,33 @@ function edit(req, res) {
   });
 }
 
-function index(req, res) {
-  console.log(`hitting index`);
-  console.log(req.user);
-  Entry.find({}, (err, allEntries) => {
-    if (err) console.error(err);
-    for (let i = 0; i < allEntries.length; i++) {
-      if (allEntries[i].headword) {
-        console.log(`${allEntries[i].id}'s headword is ${allEntries[i].headword}`);
-      } else {
-        console.log(`${allEntries[i].id} has no headword`);
-        allEntries[i].deleteOne({}).then(function () {
-          console.log('data deleted');
-        }).catch(function(error) {
-          console.log(error);
-        });
-      }
-    }
-    res.render('entries/index', {
-      entries: allEntries,
-      user: req.user,
+async function index(req, res) {
+  // query api
+  let url = api.queryDictAPI('true');
+  console.log(url);
+  let sortedEntries;
+  console.log(req.query);
+  if (req.query.sort === 'alphabetical') {
+    console.log(`hitting alphabetical`);
+    sortedEntries = await Entry.find().collation({locale: 'en', strength: 1})
+    .sort({headword:1}).then((allEntries) => {
+      return allEntries;
     });
+  } else if (req.query.sort === 'oldest') {
+    sortedEntries = await Entry.find({}).sort({updatedAt: 'asc'}).then(allEntries => {
+      console.log(allEntries[0]);
+      return allEntries;
+    });
+  } else if (req.query.sort === 'most_recent' || 
+    req.query.sort === undefined) {
+    sortedEntries = await Entry.find({}).sort({updatedAt: 'desc'}).then((allEntries) => {
+      console.log(`I'm trying to sort bv most recent`);
+      return allEntries;
+    });
+  }
+  res.render('entries/index', {
+    entries: sortedEntries,
+    user: req.user,
   });
 }
 
@@ -70,6 +77,7 @@ function newEntry(req, res) {
 
 function show(req, res) {
   console.log(`hitting show`);
+  console.log(req.originalUrl);
   Entry.findById(req.params.id, (err, entry) => {
     if (err) console.error(err);
     res.render('entries/show', {
