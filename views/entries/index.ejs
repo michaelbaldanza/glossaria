@@ -3,12 +3,15 @@
   <div>
     <a href="/entries/new" class="link-dark text-decoration-none">Add an entry</a> |
     Sort by:
-    <a href="/entries?sort=most_recent" class="link-dark text-decoration-none">most recent</a> |
-    <a href="/entries?sort=oldest" class="link-dark text-decoration-none">oldest first</a> |
-    <a href="/entries?sort=alphabetical" class="link-dark text-decoration-none">alphabetical</a>
+    <% qps.forEach((qp) => { %>
+      <% if (qp !== 'none') { %>
+        <a href="/entries?sort=<%= qp %>" class="link-dark text-decoration-none"><%= qp %></a>
+        <%= qp !== 'newest' ? '|' : '' %>
+      <% } %>
+    <% }); %>
   </div>
   <div class="page">
-    <% for (let i=0; i< entries.length; i++) { %>
+    <% for (let i=0; i < entries.length; i++) { %>
       <div class="word">
         <a href="/entries/<%= entries[i]._id %>" class="link-dark text-decoration-none">
           <%= entries[i].headword %>

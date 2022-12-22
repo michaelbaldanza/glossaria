@@ -8,6 +8,15 @@
         Delete
       </button>
     </form>
+    <button class="btn btn-info" id="api-req" lookup="<%= entry.headword %>">Look up</button>
+  </div>
+  <div id="api-entries">
+    <% entryData.forEach((en, index) => { %>
+      <div>
+        <%= index + 1 %>
+        <%= index != 0 ? 'results' : 'result' %>
+      </div>
+    <% }); %>
   </div>
   <div class="entry-body"><%= entry.bodyText %></div>
 </div>

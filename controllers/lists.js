@@ -35,6 +35,7 @@ function edit(req, res) {
         list: list,
         entries: allEntries,
         user: req.user,
+        tisp: '',
       });
     });
   });
@@ -49,6 +50,7 @@ function index(req, res) {
         entries: allEntries,
         lists: allLists,
         user: req.user,
+        tisp: '',
       });
     });
   });
@@ -67,6 +69,7 @@ function newList(req, res) {
       list: undefined,
       entries: entries,
       user: req.user,
+      tisp: '',
     });
   });
 }
@@ -79,6 +82,7 @@ function show(req, res) {
     res.render('lists/show', {
       list: list,
       user: req.user,
+      tisp: '',
     });
   });
 }

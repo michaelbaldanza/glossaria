@@ -1,5 +1,5 @@
 const Entry = require('../models/entry');
-const api = require('../config/api');
+const api = require('../utils/api');
 
 function create(req, res) {
   const entry = new Entry(req.body);
@@ -32,36 +32,70 @@ function edit(req, res) {
     res.render('entries/new', {
       entry: entry,
       user: req.user,
+      tisp: '',
     });
   });
 }
 
 async function index(req, res) {
-  // query api
-  let url = api.queryDictAPI('true');
-  console.log(url);
-  let sortedEntries;
-  console.log(req.query);
-  if (req.query.sort === 'alphabetical') {
-    console.log(`hitting alphabetical`);
-    sortedEntries = await Entry.find().collation({locale: 'en', strength: 1})
-    .sort({headword:1}).then((allEntries) => {
-      return allEntries;
-    });
-  } else if (req.query.sort === 'oldest') {
-    sortedEntries = await Entry.find({}).sort({updatedAt: 'asc'}).then(allEntries => {
-      console.log(allEntries[0]);
-      return allEntries;
-    });
-  } else if (req.query.sort === 'most_recent' || 
-    req.query.sort === undefined) {
-    sortedEntries = await Entry.find({}).sort({updatedAt: 'desc'}).then((allEntries) => {
-      console.log(`I'm trying to sort bv most recent`);
-      return allEntries;
-    });
-  }
+  // shortcut to query parameter; 'none' if no query parameters
+  const qp = Object.keys(req.query).length ? req.query.sort : 'none';
+  console.log(`here's the sort key ${qp}`);
+  console.log(req.query.sort);
+  const sortQuery = {
+    'alphabetical': await Entry.find()
+      .collation({locale: 'en', strength: 1})
+      .sort({headword:1})
+      .then((allEntries) => {
+        return allEntries;
+    }), 'oldest': await Entry.find({})
+      .sort({updatedAt: 'asc'})
+      .then(allEntries => {
+        return allEntries;
+    }),'newest': await Entry.find({})
+      .sort({updatedAt: 'desc'})
+      .then(allEntries => {
+        return allEntries;
+    }), 'none': await Entry.find({})
+      .then(allEntries => {
+        return allEntries;
+  })};
+  const sortedEntries = sortQuery[qp];
+  const qps = Object.keys(sortQuery);
+  console.log(`these are the query parameters: ${qps}`);
+  // console.log(`these are the sorted entries`);
+  // console.log(sortQuery[qp]);
+  // console.log(req.query);
+  // if (req.query.sort === 'alphabetical') {
+  //   console.log(`hitting alphabetical`);
+  //   sortString = 'alphabetical';
+  //   sortedEntries = await Entry.find().collation({locale: 'en', strength: 1})
+  //   .sort({headword:1}).then((allEntries) => {
+  //     return allEntries;
+  //   });
+  // } else if (req.query.sort === 'oldest') {
+  //   sortString = 'newest';
+  //   sortedEntries = await Entry.find({}).sort({updatedAt: 'asc'})
+  //     .then(allEntries => {
+  //       return allEntries;
+  //   });
+  // } else if (req.query.sort === 'newest' || 
+  //   req.query.sort === undefined) {
+  //   sortedEntries = await Entry.find({}).sort({updatedAt: 'desc'}).then((allEntries) => {
+  //     console.log(`trying to sort bv most recent`);
+  //     return allEntries;
+  //   });
+  // }
+  // console.log(sortedEntries[0].headword)
+  // const trueData = await fetch(api.checkDict(sortedEntries[0].headword))
+  // .then((response) => response.json())
+  // .then((data) => {return data});
+  // console.log(trueData);
   res.render('entries/index', {
     entries: sortedEntries,
+    qp: qp.length ? qp : '',
+    qps: qps,
+    tisp: 'All Entries' + ' - ',
     user: req.user,
   });
 }
@@ -75,15 +109,32 @@ function newEntry(req, res) {
   });
 }
 
-function show(req, res) {
+async function show(req, res) {
   console.log(`hitting show`);
   console.log(req.originalUrl);
-  Entry.findById(req.params.id, (err, entry) => {
-    if (err) console.error(err);
-    res.render('entries/show', {
-      entry: entry,
-      user: req.user,
-    });
+  let un;
+  const entry = await Entry.findById(req.params.id).then(entry => {
+    return entry;
+  });
+  const entryData = await fetch(api.checkDict(entry.headword))
+    .then((res) => res.json())
+    .then((data) => {return data});
+  console.log(un);
+  console.log(`Here's the entry data`);
+  console.log(entryData);
+  console.log(`And here's the def Object`);
+  console.log(entryData[0].def);
+  console.log(`which has an 'sseq' array`);
+  console.log(entryData[0].def[0].sseq[0]);
+  console.log(`which itself container an array of two items two levels deep. the second item is at the first index. here it is`);
+  console.log(entryData[0].def[0].sseq[0][0][1]);
+  console.log(`and here's the 'et' array`);
+  console.log(entryData[0].et);
+  res.render('entries/show', {
+  entry: entry,
+  entryData: entryData,
+  user: req.user,
+  tisp: '',
   });
 }
 

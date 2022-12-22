@@ -9,26 +9,13 @@ router.get('/', function(req, res, next) {
     res.render('index', {
       user: req.user,
       allUsers: allUsers,
+      tisp: '',
     });
   })
 });
 
-// router.get('/auth/google', passport.authenticate(
-//   'google',
-//   { scope: ['profile', 'email'], state: true, },
-// ));
-
 router.get('/auth/google', (req, res, next) => {
-  console.log(`hitting /auth/google`);
-  console.log(req.query);
-  const { returnTo } = req.query;
-  console.log(`I'm going to return to ${returnTo}`);
-  const state = returnTo
-    ? new Buffer(JSON.stringify({ returnTo })).toString('base64')
-    : undefined;
-  
-  const authenticator = passport.authenticate('google', {scope: ['profile', 'email'], state});
-
+  const authenticator = passport.authenticate('google', {scope: ['profile', 'email']});
   authenticator(req, res, next);
 })
 
