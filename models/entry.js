@@ -7,15 +7,13 @@ const senseSchema = new Schema({
 })
 
 const entrySchema = new Schema({
-  headword: { type: String, required: false, },
+  headword: { type: String, required: true, },
   bodyText: { type: String, required: false, },
   senses: [{ senseSchema, required: false, }],
   etymology: { type: String, required: false, },
   createdBy: { type: Schema.Types.ObjectId, ref: 'User', required: false },
 }, {
   timestamps: true,
-})
-
-
+});
 
 module.exports = mongoose.model('Entry', entrySchema);

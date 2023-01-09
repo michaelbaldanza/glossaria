@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs') %>
 <div>
-  <h3><%= list ? `Edit ${list.name}` : 'New list' %></h3>
-  <form action="/lists" method="POST">
+  <h3><%= list ? pt : 'New list' %></h3>
+  <form action="<%= list ? `/lists/${list.id}?_method=PUT` : '/lists' %>" method="POST">
     <div class="mb-3">
       <label for="name-input" class="form-label">Name</label>
       <input type="text" name="name" class="form-control" id="headword-input"

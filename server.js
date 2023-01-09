@@ -59,5 +59,7 @@ app.use(function(err, req, res, next) {
 
 
 app.locals.title = 'Glossaria';
+// assign empty string to pt to silence ReferenceErrors
+app.locals.pt = '';
 
 module.exports = app;

@@ -1,4 +1,5 @@
 var express = require('express');
+const api = require('../utils/api');
 var router = express.Router();
 const passport = require('passport');
 const User = require('../models/user');
@@ -9,7 +10,6 @@ router.get('/', function(req, res, next) {
     res.render('index', {
       user: req.user,
       allUsers: allUsers,
-      tisp: '',
     });
   })
 });

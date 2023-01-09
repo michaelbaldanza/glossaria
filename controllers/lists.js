@@ -35,7 +35,7 @@ function edit(req, res) {
         list: list,
         entries: allEntries,
         user: req.user,
-        tisp: '',
+        pt: 'Edit ' + list.name,
       });
     });
   });
@@ -50,7 +50,7 @@ function index(req, res) {
         entries: allEntries,
         lists: allLists,
         user: req.user,
-        tisp: '',
+        pt: 'All Lists',
       });
     });
   });
@@ -69,7 +69,7 @@ function newList(req, res) {
       list: undefined,
       entries: entries,
       user: req.user,
-      tisp: '',
+      pt: 'Add a List',
     });
   });
 }
@@ -82,14 +82,14 @@ function show(req, res) {
     res.render('lists/show', {
       list: list,
       user: req.user,
-      tisp: '',
+      pt: list.name,
     });
   });
 }
 
 function update(req, res) {
-  console.log(req.body);
-  Lists.findById(req.params.id, (err, list) => {
+  console.log(`hitting update list`);
+  List.findById(req.params.id, (err, list) => {
     if (err) console.error(err);
     list.name = req.body.name;
     list.entries = req.body.entries;

@@ -1,13 +1,15 @@
 const apiBtn = document.getElementById('api-req');
 
+const trigger = document.getElementById('tigger');
+
 apiBtn.addEventListener('click', handleClick);
 
 console.log(apiBtn);
 
-function checkDict(word) {
-  return 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/' +
-    word + '?key=' + process.env.DICTIONARY_KEY;
-}
+// function checkDict(word) {
+//   return 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/' +
+//     word + '?key=' + process.env.DICTIONARY_KEY;
+// }
 
 async function handleClick(e) {
   const lookup = e.target.getAttribute('lookup');
