@@ -1,0 +1,190 @@
+<%- include('../partials/header.ejs') %>
+
+<h1><%= response.word %></h1>
+<div id="oxford-gb">
+  <h1>Oxford Dictionaries, GB</h1>
+  <% oxfordGB.results.forEach((result, idx1) => { %>
+    <div>
+      <h3>
+        <%= result.id %>
+        <% if (oxfordGB.results.length > 1) { %>
+          <%= idx1 + 1 %>
+        <% } %>
+      </h3>
+      <div>
+        <h5>Etymology</h5>
+        <% result.etyms.forEach((etym) => { %>
+          <div>
+            <%= etym %>
+          </div>
+        <% }); %>
+      </div>
+      <div>
+        <% result.lexicalEntries.forEach((lexicalEntry, idx2) => { %>
+          <div>
+            <h5><%= lexicalEntry.lexicalCategory.text %></h5>
+            <div>
+              <% lexicalEntry.entries.forEach((entry, idx3) => { %>
+                <ol>
+                  <% entry.senses.forEach((sense, idx5) => { %>
+                    <li>
+                      <% sense.definitions.forEach((senseDef, idx6) => { %>
+                        <%= senseDef %>
+                        <%= sense.definitions.length > 1 && idx6 !== sense.definitions.length - 1 ? ';' : '' %>
+                        <%= sense.id ? ' - ' + sense.id : '' %>
+                      <% }); %>
+                      <% if (sense.examples) { %>
+                        <ul>
+                          <% sense.examples.forEach((example, idx6p5) => { %>
+                            <li><%= example.text %></li>
+                          <% }); %>
+                        </ul>
+                      <% } %>
+                      <% if (sense.subsenses) { %>
+                        <ol>
+                        <% sense.subsenses.forEach((subsense, idx7) => { %>
+                          <li>
+                          <% subsense.definitions.forEach((subsenseDef, idx8) => { %>
+                            <%= subsenseDef %>
+                            <%= subsense.definitions.length > 1 && idx8 !== subsense.definitions.length - 1 ? ';' : '' %>
+                          <% }); %>
+                          <% if (subsense.examples) { %>
+                            <ul>
+                              <% subsense.examples.forEach((example, idx9) => { %> 
+                                <li><%= example.text %></li>
+                              <% }); %>
+                            </ul>
+                          <% } %>
+                          </li>
+                        <% }); %>
+                        </ol>
+                      <% } %>
+                    </li>
+                  <% }); %>
+                </ol>
+              <% }); %>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+
+<div id="oxford-us">
+  <h1>Oxford Dictionaries, US</h1>
+  <% oxfordUS.results.forEach((result, idx1) => { %>
+    <div>
+      <h3>
+        <%= result.id %>
+        <% if (oxfordUS.results.length > 1) { %>
+          <%= idx1 + 1 %>
+        <% } %>
+      </h3>
+      <div>
+        <h5>Etymology</h5>
+        <% result.etyms.forEach((etym) => { %>
+          <div>
+            <%= etym %>
+          </div>
+        <% }); %>
+      </div>
+      <div>
+        <% result.lexicalEntries.forEach((lexicalEntry, idx2) => { %>
+          <div>
+            <h5><%= lexicalEntry.lexicalCategory.text %></h5>
+            <div>
+              <% lexicalEntry.entries.forEach((entry, idx3) => { %>
+                <ol>
+                  <% entry.senses.forEach((sense, idx5) => { %>
+                    <li>
+                      <% sense.definitions.forEach((senseDef, idx6) => { %>
+                        <%= senseDef %>
+                        <%= sense.definitions.length > 1 && idx6 !== sense.definitions.length - 1 ? ';' : '' %>
+                        <%= sense.id ? ' - ' + sense.id : '' %>
+                      <% }); %>
+                      <% if (sense.examples) { %>
+                        <ul>
+                          <% sense.examples.forEach((example, idx6p5) => { %>
+                            <li><%= example.text %></li>
+                          <% }); %>
+                        </ul>
+                      <% } %>
+                      <% if (sense.subsenses) { %>
+                        <ol>
+                        <% sense.subsenses.forEach((subsense, idx7) => { %>
+                          <li>
+                          <% subsense.definitions.forEach((subsenseDef, idx8) => { %>
+                            <%= subsenseDef %>
+                            <%= subsense.definitions.length > 1 && idx8 !== subsense.definitions.length - 1 ? ';' : '' %>
+                          <% }); %>
+                          <% if (subsense.examples) { %>
+                            <ul>
+                              <% subsense.examples.forEach((example, idx9) => { %> 
+                                <li><%= example.text %></li>
+                              <% }); %>
+                            </ul>
+                          <% } %>
+                          </li>
+                        <% }); %>
+                        </ol>
+                      <% } %>
+                    </li>
+                  <% }); %>
+                </ol>
+              <% }); %>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+<div id="merriam-websters">
+  <h1>Merriam-Webster's Collegiate Dictionary</h1>
+  <% mws.forEach((mw, idx) => { %>
+    <div>
+      <h3>
+        <%= mw.word %>
+        <% if (mw.word === response.word && mws.length > 1) { %>
+        <span>
+          <%= idx + 1 %>
+        </span>
+        <% } %>
+      </h3>
+      <div><%= mw.partOfSpeech %></div>
+      <div><%= mw.inflections %></div>
+      <div>
+        <ol>
+          <% mw.shortDef.forEach((shortDef, index) => { %>
+            <li><%= shortDef %></li>
+          <% }); %>
+        </ol>
+      </div>
+    </div>
+  <% }); %>
+</div>
+<div id="free-dictionary">
+  <h1>Free Dictionary</h1>
+  <% response.fd.forEach((fd, idx) => { %>
+    <div>
+      <h3><%= fd.word %> <span><%= idx + 1 %></span></h3>
+      <% fd.meanings.forEach((meaning) => { %>
+        <div><%= meaning.partOfSpeech %></div>
+        <ol>
+          <% meaning.definitions.forEach((def) => { %>
+            <li><%= def.definition %></li>
+            <ul>
+              <% if (def.synonyms && def.synonyms.length) { %><li><%= def.synonyms %></li><% } %>
+              <% if (def.antonyms && def.antonyms.length) { %><li><%= def.antonyms %></li><% } %>
+              <% if (def.example && def.example.length) { %><li><%= def.example %></li><% } %>
+            </ul>
+          <% }); %>
+          </ol>
+      <% }); %>
+    </div>
+  <% }); %>
+</div>
+<%- include('../partials/footer.ejs') %>

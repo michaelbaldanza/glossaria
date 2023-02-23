@@ -1,0 +1,54 @@
+[
+  {
+    "word": "woad",
+    "phonetics": [],
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "The plant Isatis tinctoria.",
+            "synonyms": [],
+            "antonyms": []
+          },
+          {
+            "definition": "The blue dye made from the leaves of the plant.",
+            "synonyms": [],
+            "antonyms": []
+          }
+        ],
+        "synonyms": [
+          "indigo",
+          "indigotin",
+          "Isatis tinctoria",
+          "glastum"
+        ],
+        "antonyms": []
+      },
+      {
+        "partOfSpeech": "verb",
+        "definitions": [
+          {
+            "definition": "To plant or cultivate woad.",
+            "synonyms": [],
+            "antonyms": []
+          },
+          {
+            "definition": "To dye with woad.",
+            "synonyms": [],
+            "antonyms": []
+          }
+        ],
+        "synonyms": [],
+        "antonyms": []
+      }
+    ],
+    "license": {
+      "name": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    "sourceUrls": [
+      "https://en.wiktionary.org/wiki/woad"
+    ]
+  }
+]

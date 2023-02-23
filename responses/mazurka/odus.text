@@ -1,0 +1,93 @@
+{
+  "id": "mazurka",
+  "metadata": {
+    "operation": "retrieve",
+    "provider": "Oxford University Press",
+    "schema": "RetrieveEntry"
+  },
+  "results": [
+    {
+      "id": "mazurka",
+      "language": "en-us",
+      "lexicalEntries": [
+        {
+          "entries": [
+            {
+              "etymologies": [
+                "early 19th century: via German from Polish mazurka, accusative or genitive singular of mazurek ‘folk dance from Mazovia’, from mazur, denoting an inhabitant of the province Mazovia"
+              ],
+              "pronunciations": [
+                {
+                  "dialects": [
+                    "American English"
+                  ],
+                  "phoneticNotation": "respell",
+                  "phoneticSpelling": "məˈzərkə"
+                },
+                {
+                  "audioFile": "https://audio.oxforddictionaries.com/en/mp3/mazurka__us_1.mp3",
+                  "dialects": [
+                    "American English"
+                  ],
+                  "phoneticNotation": "IPA",
+                  "phoneticSpelling": "məˈzərkə"
+                },
+                {
+                  "dialects": [
+                    "American English"
+                  ],
+                  "phoneticNotation": "respell",
+                  "phoneticSpelling": "məˈzo͝orkə"
+                },
+                {
+                  "audioFile": "https://audio.oxforddictionaries.com/en/mp3/mazurka__us_2.mp3",
+                  "dialects": [
+                    "American English"
+                  ],
+                  "phoneticNotation": "IPA",
+                  "phoneticSpelling": "məˈzʊrkə"
+                }
+              ],
+              "senses": [
+                {
+                  "definitions": [
+                    "a lively Polish dance in triple time."
+                  ],
+                  "domainClasses": [
+                    {
+                      "id": "music",
+                      "text": "Music"
+                    },
+                    {
+                      "id": "dance",
+                      "text": "Dance"
+                    }
+                  ],
+                  "id": "m_en_gbus0625980.011",
+                  "semanticClasses": [
+                    {
+                      "id": "dance",
+                      "text": "Dance"
+                    }
+                  ],
+                  "shortDefinitions": [
+                    "lively Polish dance in triple time"
+                  ]
+                }
+              ]
+            }
+          ],
+          "language": "en-us",
+          "lexicalCategory": {
+            "id": "noun",
+            "text": "Noun"
+          },
+          "text": "mazurka"
+        }
+      ],
+      "type": "headword",
+      "word": "mazurka"
+    }
+  ],
+  "word": "mazurka"
+}

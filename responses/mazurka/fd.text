@@ -1,0 +1,43 @@
+[
+  {
+    "word": "mazurka",
+    "phonetic": "/məˈzɜː(ɹ)kə/",
+    "phonetics": [
+      {
+        "text": "/məˈzɜː(ɹ)kə/",
+        "audio": ""
+      }
+    ],
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A Polish folk dance in triple time, usually moderately fast, containing a heavy accent on the third beat and occasionally the second beat.",
+            "synonyms": [],
+            "antonyms": []
+          },
+          {
+            "definition": "A classical musical composition inspired by the folk dance and conforming in some respects to its form, particularly as popularized by Chopin.",
+            "synonyms": [],
+            "antonyms": []
+          },
+          {
+            "definition": "A figure skating move that combines elements of the toe loop and bunny-hop.",
+            "synonyms": [],
+            "antonyms": []
+          }
+        ],
+        "synonyms": [],
+        "antonyms": []
+      }
+    ],
+    "license": {
+      "name": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    "sourceUrls": [
+      "https://en.wiktionary.org/wiki/mazurka"
+    ]
+  }
+]

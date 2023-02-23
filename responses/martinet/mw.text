@@ -1,0 +1,94 @@
+[
+  {
+    "meta": {
+      "id": "martinet",
+      "uuid": "8d07509c-4565-4557-882d-23770c485399",
+      "sort": "131060000",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "martinet",
+        "martinets"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "mar*ti*net",
+      "prs": [
+        {
+          "mw": "ˌmär-tə-ˈnet",
+          "sound": {
+            "audio": "martin02",
+            "ref": "c",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "sn": "1",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a strict disciplinarian "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "The prison's warden was a cruel {wi}martinet{/wi}."
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "2",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a person who stresses a rigid adherence to the details of forms and methods "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "a {wi}martinet{/wi} in conducting meetings of the society, he never tolerated any sign of levity or indecorum",
+                        "aq": {
+                          "auth": "D. J. Boorstin"
+                        }
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "et": [
+      [
+        "text",
+        "Jean {it}Martinet{/it}, 17th century French army officer"
+      ]
+    ],
+    "date": "1737{ds||1||}",
+    "shortdef": [
+      "a strict disciplinarian",
+      "a person who stresses a rigid adherence to the details of forms and methods"
+    ]
+  }
+]

@@ -1,0 +1,400 @@
+[
+  {
+    "meta": {
+      "id": "submit",
+      "uuid": "d69073cf-7554-4f4f-bb5b-0fd143056bbe",
+      "sort": "194900900",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "submit",
+        "submits",
+        "submitted",
+        "submitting"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "sub*mit",
+      "prs": [
+        {
+          "mw": "səb-ˈmit",
+          "sound": {
+            "audio": "submit01",
+            "ref": "c",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "verb",
+    "ins": [
+      {
+        "if": "sub*mit*ted"
+      },
+      {
+        "if": "sub*mit*ting"
+      }
+    ],
+    "def": [
+      {
+        "vd": "transitive verb",
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "sn": "1 a",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to yield to governance or authority"
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to subject to a condition, treatment, or operation "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "the metal was {it}submitted{/it} to analysis"
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "2",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to present or propose to another for review, consideration, or decision"
+                  ]
+                ],
+                "sdsense": {
+                  "sd": "also",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}to deliver formally "
+                    ],
+                    [
+                      "vis",
+                      [
+                        {
+                          "t": "{it}submitted{/it} my resignation"
+                        }
+                      ]
+                    ]
+                  ]
+                }
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "3",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to put forward as an opinion or contention "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "we {wi}submit{/wi} that the charge is not proved"
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      },
+      {
+        "vd": "intransitive verb",
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "sn": "1 a",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to yield oneself to the authority or will of another {bc}{sx|surrender||}"
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to permit oneself to be subjected to something "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "had to {wi}submit{/wi} to surgery"
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "2",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to defer to or consent to abide by the opinion or authority of another"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "syns": [
+      {
+        "pl": "synonyms",
+        "pt": [
+          [
+            "text",
+            "{sc}yield{/sc} {sc}submit{/sc} {sc}capitulate{/sc} {sc}succumb{/sc} {sc}relent{/sc} {sc}defer{/sc} mean to give way to someone or something that one can no longer resist. {sc}yield{/sc} may apply to any sort or degree of giving way before force, argument, persuasion, or entreaty. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "{it}yields{/it} too easily in any argument"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}submit{/sc} suggests full surrendering after resistance or conflict to the will or control of another. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "a repentant sinner vowing to {it}submit{/it} to the will of God"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}capitulate{/sc} stresses the fact of ending all resistance and may imply either a coming to terms (as with an adversary) or hopelessness in the face of an irresistible opposing force. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "officials {it}capitulated{/it} to the protesters' demands"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}succumb{/sc} implies weakness and helplessness to the one that gives way or an overwhelming power to the opposing force. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "a stage actor {it}succumbing{/it} to the lure of Hollywood"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}relent{/sc} implies a yielding through pity or mercy by one who holds the upper hand. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "finally {it}relented{/it} and let the children stay up late"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}defer{/sc} implies a voluntary yielding or submitting out of respect or reverence for or deference and affection toward another. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "I {it}defer{/it} to your expertise in these matters"
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "et": [
+      [
+        "text",
+        "Middle English {it}submitten{/it}, from Latin {it}submittere{/it} to lower, submit, from {it}sub-{/it} + {it}mittere{/it} to send"
+      ]
+    ],
+    "date": "14th century{ds|t|1|a|}",
+    "shortdef": [
+      "to yield to governance or authority",
+      "to subject to a condition, treatment, or operation",
+      "to present or propose to another for review, consideration, or decision; also : to deliver formally"
+    ]
+  },
+  {
+    "meta": {
+      "id": "resubmit",
+      "uuid": "f65503bd-64ee-4c48-95f4-db78ccbadb44",
+      "sort": "182608000",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "re-submission",
+        "re-submissions",
+        "re-submit",
+        "re-submits",
+        "re-submitted",
+        "re-submitting",
+        "resubmission",
+        "resubmissions",
+        "resubmit",
+        "resubmits",
+        "resubmitted",
+        "resubmitting"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "re*sub*mit",
+      "prs": [
+        {
+          "mw": "ˌrē-səb-ˈmit",
+          "sound": {
+            "audio": "resubmit_1",
+            "ref": "owl",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "verb",
+    "ins": [
+      {
+        "if": "re*sub*mit*ted"
+      },
+      {
+        "if": "re*sub*mit*ting"
+      }
+    ],
+    "def": [
+      {
+        "vd": "transitive verb",
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to {d_link|submit|submit} (something) again "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "made some revisions and {wi}resubmitted{/wi} the assignment"
+                      },
+                      {
+                        "t": "… urged the House leadership to withdraw the bill and {wi}resubmit{/wi} it in the next Congress.",
+                        "aq": {
+                          "auth": "Edward M. Davis"
+                        }
+                      },
+                      {
+                        "t": "Almost everyone plays the ratings game, trimming and {wi}resubmitting{/wi} films for less restrictive designations.",
+                        "aq": {
+                          "auth": "Maitland McDonagh"
+                        }
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "uros": [
+      {
+        "ure": "re*sub*mis*sion",
+        "prs": [
+          {
+            "mw": "ˌrē-səb-ˈmi-shən",
+            "sound": {
+              "audio": "resubmission_1",
+              "ref": "owl",
+              "stat": "1"
+            }
+          }
+        ],
+        "fl": "noun",
+        "ins": [
+          {
+            "il": "plural",
+            "if": "re*sub*mis*sions"
+          }
+        ],
+        "utxt": [
+          [
+            "vis",
+            [
+              {
+                "t": "the deadline for {wi}resubmission{/wi}"
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "date": "1604",
+    "shortdef": [
+      "to submit (something) again"
+    ]
+  }
+]

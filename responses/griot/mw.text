@@ -1,0 +1,68 @@
+[
+  {
+    "meta": {
+      "id": "griot",
+      "uuid": "fd01ce76-5017-4656-ab75-29f190eba639",
+      "sort": "072519000",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "griot",
+        "griots"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "gri*ot",
+      "prs": [
+        {
+          "mw": "ˈgrē-ˌō",
+          "sound": {
+            "audio": "griot001",
+            "ref": "c",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}any of a class of musician-entertainers of western Africa whose performances include tribal histories and genealogies"
+                  ]
+                ],
+                "sdsense": {
+                  "sd": "broadly",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}{sx|storyteller||}"
+                    ]
+                  ]
+                }
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "et": [
+      [
+        "text",
+        "French"
+      ]
+    ],
+    "date": "1820",
+    "shortdef": [
+      "any of a class of musician-entertainers of western Africa whose performances include tribal histories and genealogies; broadly : storyteller"
+    ]
+  }
+]

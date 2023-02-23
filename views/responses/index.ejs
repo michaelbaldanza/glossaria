@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+<div>
+  <a href="/words/new" class="link-dark text-decoration-none">Add a word</a>
+  <div>
+    <% responses.forEach((res) => { %>
+      <h3><a href="/words/<%= res.word %>" class="link-dark text-decoration-none">
+        <%= res.word %>
+      </a></h3>
+    <% }); %>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>

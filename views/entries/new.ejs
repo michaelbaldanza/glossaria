@@ -14,12 +14,27 @@
         <textarea class="form-control" id="body-input" type="text" name="bodyText"><%= entry ? entry.bodyText : '' %></textarea>
       </div>
       <div class="mb-3">
-        <label>Add dictionary info?</label>
-        <input type="checkbox">
+        <label for="addInfo">Add dictionary info?</label>
+        <input type="checkbox" id="addInfo" name="addInfo">
       </div>
       <button type="submit" class="btn btn-primary">
         Submit
       </button>
     </form>
+    <div class="api-res-container">
+      <div class="api-res">one api</div>
+      <div class="api-res">two api</div>
+    </div>
+    <% if (entry) { %>
+      <% responses.forEach((res) => { %>
+        <div>
+        <% for (let i = 1; i < keys.length; i ++) { %>
+          <div>
+            <%= res[keys[i]] %>
+          </div>
+        <% } %>
+        </div>
+      <% }); %>
+    <% } %>
 </div>
 <%- include('../partials/footer.ejs') %>

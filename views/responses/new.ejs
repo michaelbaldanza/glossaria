@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+<h3><%= response ? 'Edit' : 'Add' %> a response</h3>
+<form action="<%= response ? `/words/${response.id}?_method=PUT` : '/words' %>" method="POST">
+  <div class="mb-3">
+    <label for="word-input" class="form-label">Word</label>
+    <input
+      type="text" class="form-control" id="word-input" name="word"
+      value="<%= response ? response.word : '' %>"
+    >
+  </div>
+  <button type="submit" class="btn btn-primary">
+    Submit
+  </button>
+</form>
+<%- include('../partials/footer.ejs') %>

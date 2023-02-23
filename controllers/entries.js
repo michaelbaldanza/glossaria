@@ -1,8 +1,28 @@
 const Entry = require('../models/entry');
 const api = require('../utils/api');
 
-function create(req, res) {
+async function create(req, res) {
   console.log(req.body);
+  if (req.body.addInfo) {
+    const q = req.body.headword; // word to check apis for
+    const entryData = await fetch(api.lookup(q))
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(`logging entry data`);
+      // console.log(data);
+      console.log(`API data stored`);
+      return data;
+  });
+    if (entryData.length === 1 &&typeof(entryData[0] === 'object')) {
+      console.log('One valid response!');
+    } else if (!entryData.length) {
+      console.log('No results');
+    } else if (entryData.length > 0) {
+      console.log(`gonna have to choose just one`);
+    }
+  } else {
+    console.log(`NOT CHECKED`);
+  }
   const entry = new Entry(req.body);
   entry.save(function(err) {
     if (err) return res.render('entries/new');
@@ -27,14 +47,22 @@ function deleteEntry(req, res) {
   });
 }
 
-function edit(req, res) {
-  Entry.findById(req.params.id, (err, entry) => {
-    if (err) console.error(err);
-    res.render('entries/new', {
-      entry: entry,
-      user: req.user,
-      pt: 'Edit ' + entry.headword,
-    });
+async function edit(req, res) {
+  console.log(`hitting edit`);
+  const entry = await Entry.findById(req.params.id);
+  // console.log(entry);
+  const lookup = await api.lookup(entry.headword);
+  
+  const responses = api.read(lookup);
+  // console.log(responses);
+  const keys = Object.keys(responses[0]);
+  // console.log(keys);
+  res.render('entries/new', {
+    entry: entry,
+    responses: responses,
+    keys: keys,
+    user: req.user,
+    pt: 'Edit ' + entry.headword,
   });
 }
 
@@ -92,14 +120,14 @@ async function show(req, res) {
   const entry = await Entry.findById(req.params.id).then(entry => {
     return entry;
   });
-  // let entryData = {};
-  const entryData = await fetch(api.checkDict(entry.headword))
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(`logging entry data`);
-      console.log(data);
-      return data;
-    });
+  let entryData = [];
+  // const entryData = await fetch(api.lookup(entry.headword))
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     console.log(`logging entry data`);
+  //     console.log(data);
+  //     return data;
+  // });
   // entryData = await re.json();
   if (entryData.length) {
     console.log(un);
@@ -134,8 +162,7 @@ function update(req, res) {
     if (err) console.error(err);
     entry.headword = req.body.headword;
     entry.bodyText = req.body.bodyText;
-    // causes save to send only updated values to MongoDB
-    entry.modifiedPaths();
+    entry.modifiedPaths(); // causes save to send only updated values to MongoDB
     entry.save();
     res.redirect(`/entries/${req.params.id}`);
   });

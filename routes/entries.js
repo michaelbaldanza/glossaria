@@ -15,10 +15,6 @@ const entriesCtrl = require('../controllers/entries');
 // auth checks removed to speed up development
 router.get('/', entriesCtrl.index);
 router.get('/new', entriesCtrl.new);
-router.get('/dummy', function(req, res, next) {
-  console.log(req.body);
-  res.render('entries/dummy', {user: req.user});
-});
 router.get('/:id', entriesCtrl.show);
 router.get('/:id/edit', entriesCtrl.edit);
 router.post('/', entriesCtrl.create);

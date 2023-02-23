@@ -1,0 +1,731 @@
+[
+  {
+    "meta": {
+      "id": "truth",
+      "uuid": "80c067ec-1c59-45ba-b11f-d2509c8dc453",
+      "sort": "200426800",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "in truth",
+        "truth",
+        "truths"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth",
+      "prs": [
+        {
+          "mw": "ˈtrüth",
+          "sound": {
+            "audio": "truth001",
+            "ref": "c",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "noun",
+    "ins": [
+      {
+        "il": "plural",
+        "if": "truths",
+        "prs": [
+          {
+            "mw": "ˈtrüt͟hz",
+            "sound": {
+              "audio": "truth002",
+              "ref": "c",
+              "stat": "1"
+            }
+          },
+          {
+            "mw": "ˈtrüths"
+          }
+        ]
+      }
+    ],
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "pseq",
+              [
+                [
+                  "sense",
+                  {
+                    "sn": "1 a (1)",
+                    "dt": [
+                      [
+                        "text",
+                        "{bc}the body of real things, events, and facts {bc}{sx|actuality||}"
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "sense",
+                  {
+                    "sn": "(2)",
+                    "dt": [
+                      [
+                        "text",
+                        "{bc}the state of being the case {bc}{sx|fact||}"
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "sense",
+                  {
+                    "sn": "(3)",
+                    "lbs": [
+                      "often capitalized"
+                    ],
+                    "dt": [
+                      [
+                        "text",
+                        "{bc}a transcendent fundamental or spiritual reality"
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a judgment, proposition, or idea that is true or accepted as true "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "{wi}truths{/wi} of thermodynamics"
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "c",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}the body of true statements and propositions"
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "2 a",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}the property (as of a statement) of being in accord with fact or reality"
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "sls": [
+                  "chiefly British"
+                ],
+                "dt": [
+                  [
+                    "text",
+                    "{bc}{sx|true||2}"
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "c",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}fidelity to an original or to a standard"
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "3 a",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}sincerity in action, character, and utterance"
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "sls": [
+                  "archaic"
+                ],
+                "dt": [
+                  [
+                    "text",
+                    "{bc}{sx|fidelity||}, {sx|constancy||}"
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "4",
+                "lbs": [
+                  "capitalized"
+                ],
+                "sls": [
+                  "Christian Science"
+                ],
+                "dt": [
+                  [
+                    "text",
+                    "{bc}{sx|god||}"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "dros": [
+      {
+        "drp": "in truth",
+        "def": [
+          {
+            "sseq": [
+              [
+                [
+                  "sense",
+                  {
+                    "dt": [
+                      [
+                        "text",
+                        "{bc}in accordance with fact {bc}{sx|actually||}"
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "et": [
+      [
+        "text",
+        "Middle English {it}trewthe{/it}, from Old English {it}trēowth{/it} fidelity; akin to Old English {it}trēowe{/it} faithful {ma}{mat|true:1|}{/ma}"
+      ]
+    ],
+    "date": "before 12th century{ds||3|b|}",
+    "shortdef": [
+      "the body of real things, events, and facts : actuality",
+      "the state of being the case : fact",
+      "a transcendent fundamental or spiritual reality"
+    ]
+  },
+  {
+    "meta": {
+      "id": "Truth:b",
+      "uuid": "1567e037-1f5c-470e-9987-d73d0f99bccf",
+      "sort": "305723000",
+      "src": "collegiate",
+      "section": "biog",
+      "stems": [
+        "Sojourner Truth",
+        "Truth"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "Truth",
+      "prs": [
+        {
+          "mw": "ˈtrüth",
+          "sound": {
+            "audio": "bixtru05",
+            "ref": "c",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "biographical name",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "Sojourner {it}circa{/it} 1797–1883 American evangelist and reformer"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "shortdef": [
+      "Sojourner circa 1797—1883 American evangelist and reformer"
+    ]
+  },
+  {
+    "meta": {
+      "id": "truth serum",
+      "uuid": "57dc8536-1141-43a0-8652-e79ecaa70953",
+      "sort": "200427000",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "truth serum",
+        "truth serums"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth serum"
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a hypnotic or anesthetic held to induce a subject under questioning to talk freely"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "date": "1913",
+    "shortdef": [
+      "a hypnotic or anesthetic held to induce a subject under questioning to talk freely"
+    ]
+  },
+  {
+    "meta": {
+      "id": "truth set",
+      "uuid": "dbd7c50c-88a0-482b-b27a-9c310d4facc6",
+      "sort": "200427100",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "truth set",
+        "truth sets"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth set"
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a mathematical or logical set containing all the elements that make a given statement of relationships true when substituted in it "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "the equation {it}x{/it} + 7 = 10 has as its {it}truth set{/it} the single number 3"
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "date": "1940",
+    "shortdef": [
+      "a mathematical or logical set containing all the elements that make a given statement of relationships true when substituted in it"
+    ]
+  },
+  {
+    "meta": {
+      "id": "truth table",
+      "uuid": "7e233062-c303-4e13-8e0a-7fde43608d65",
+      "sort": "200427200",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "truth table",
+        "truth tables"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth table"
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a table that shows the truth-value of a compound statement for every truth-value of its component statements"
+                  ]
+                ],
+                "sdsense": {
+                  "sd": "also",
+                  "dt": [
+                    [
+                      "text",
+                      "{bc}a similar table (as for a computer logic circuit) showing the value of the output for each value of each input"
+                    ]
+                  ]
+                }
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "table": {
+      "tableid": "truthtab",
+      "displayname": "Truth Table"
+    },
+    "date": "1920",
+    "shortdef": [
+      "a table that shows the truth-value of a compound statement for every truth-value of its component statements; also : a similar table (as for a computer logic circuit) showing the value of the output for each value of each input"
+    ]
+  },
+  {
+    "meta": {
+      "id": "truth-value",
+      "uuid": "4f28e035-7614-4ae4-8fdc-676e0244cc26",
+      "sort": "200427300",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "truth-value",
+        "truth-values"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth-val*ue",
+      "prs": [
+        {
+          "mw": "ˈtrüth-ˌval-(ˌ)yü",
+          "sound": {
+            "audio": "truth-value_1",
+            "ref": "owl",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}the truth or falsity of a proposition or statement"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "date": "1903",
+    "shortdef": [
+      "the truth or falsity of a proposition or statement"
+    ]
+  },
+  {
+    "meta": {
+      "id": "Truth or Consequences:g",
+      "uuid": "dd6b13d5-1be1-4a23-9a93-438aa8ad64e7",
+      "sort": "283729000",
+      "src": "collegiate",
+      "section": "geog",
+      "stems": [
+        "Hot Springs",
+        "Truth or Consequences"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "Truth or Consequences"
+    },
+    "vrs": [
+      {
+        "vl": "formerly",
+        "va": "Hot Springs"
+      }
+    ],
+    "fl": "geographical name",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "city on the Rio Grande in southwestern New Mexico the name of which was changed as part of a radio program promotion in 1950 {it}population{/it} 6475"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "shortdef": [
+      "city on the Rio Grande in southwestern New Mexico the name of which was changed as part of a radio program promotion in 1950 population 6475"
+    ]
+  },
+  {
+    "meta": {
+      "id": "truth be told",
+      "uuid": "cd15fd24-8b46-417d-bebf-69231f1806c5",
+      "sort": "3021515000",
+      "src": "ld",
+      "section": "idioms",
+      "stems": [
+        "truth be told"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth be told"
+    },
+    "fl": "idiom",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "uns",
+                    [
+                      [
+                        [
+                          "text",
+                          "used to say that one is stating the truth "
+                        ],
+                        [
+                          "vis",
+                          [
+                            {
+                              "t": "{it}Truth be told{/it}, the food was pretty bad."
+                            }
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "shortdef": [
+      "—used to say that one is stating the truth"
+    ]
+  },
+  {
+    "meta": {
+      "id": "truth be told/known",
+      "uuid": "72b10d8a-d6d8-4de9-94ab-31aac8ca6f5a",
+      "sort": "3021516000",
+      "src": "ld",
+      "section": "idioms",
+      "stems": [
+        "truth be known",
+        "truth be told",
+        "truth be told/known"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "truth be told/known"
+    },
+    "fl": "idiom",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "uns",
+                    [
+                      [
+                        [
+                          "text",
+                          "used to say what are the true or real facts about something "
+                        ],
+                        [
+                          "vis",
+                          [
+                            {
+                              "t": "I told her I liked the restaurant but, {it}truth be told/known{/it}, the food was pretty bad."
+                            }
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "shortdef": [
+      "—used to say what are the true or real facts about something"
+    ]
+  },
+  {
+    "meta": {
+      "id": "half-truth",
+      "uuid": "97f661a9-515e-4611-a2f3-a1811f77d85c",
+      "sort": "080024700",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "half-truth",
+        "half-truths"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "half-truth",
+      "prs": [
+        {
+          "mw": "ˈhaf-ˌtrüth",
+          "sound": {
+            "audio": "halftr03",
+            "ref": "c",
+            "stat": "1"
+          }
+        },
+        {
+          "mw": "ˈhäf-"
+        }
+      ]
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "sn": "1",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a statement that is only partially true"
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "2",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}a statement that mingles truth and falsehood with deliberate intent to deceive"
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "date": "1658{ds||1||}",
+    "shortdef": [
+      "a statement that is only partially true",
+      "a statement that mingles truth and falsehood with deliberate intent to deceive"
+    ]
+  }
+]

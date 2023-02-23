@@ -1,0 +1,183 @@
+[
+  {
+    "meta": {
+      "id": "deleterious",
+      "uuid": "2754ba72-05d7-42b7-8663-64c24790d037",
+      "sort": "040984000",
+      "src": "collegiate",
+      "section": "alpha",
+      "stems": [
+        "deleterious",
+        "deleteriously",
+        "deleteriousness",
+        "deleteriousnesses"
+      ],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "del*e*te*ri*ous",
+      "prs": [
+        {
+          "mw": "ˌde-lə-ˈtir-ē-əs",
+          "sound": {
+            "audio": "delete02",
+            "ref": "c",
+            "stat": "1"
+          }
+        }
+      ]
+    },
+    "fl": "adjective",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "dt": [
+                  [
+                    "text",
+                    "{bc}harmful often in a {d_link|subtle|subtle} or unexpected way "
+                  ],
+                  [
+                    "vis",
+                    [
+                      {
+                        "t": "{wi}deleterious{/wi} effects"
+                      },
+                      {
+                        "t": "{wi}deleterious{/wi} to health"
+                      }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "uros": [
+      {
+        "ure": "del*e*te*ri*ous*ly",
+        "fl": "adverb"
+      },
+      {
+        "ure": "del*e*te*ri*ous*ness",
+        "fl": "noun"
+      }
+    ],
+    "syns": [
+      {
+        "pl": "synonyms",
+        "pt": [
+          [
+            "text",
+            "{sc}pernicious{/sc} {sc}baneful{/sc} {sc}noxious{/sc} {sc}deleterious{/sc} {sc}detrimental{/sc} mean exceedingly harmful. {sc}pernicious{/sc} implies irreparable harm done through evil or insidious corrupting or undermining. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "the claim that pornography has a {it}pernicious{/it} effect on society"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}baneful{/sc} implies injury through poisoning or destroying. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "the {it}baneful{/it} notion that discipline destroys creativity"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}noxious{/sc} applies to what is both offensive and injurious to the health of a body or mind. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "{it}noxious{/it} chemical fumes"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}deleterious{/sc} applies to what has an often unsuspected harmful effect. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "a diet found to have {it}deleterious{/it} effects"
+              }
+            ]
+          ],
+          [
+            "text",
+            " {sc}detrimental{/sc} implies obvious harmfulness to something specified. "
+          ],
+          [
+            "vis",
+            [
+              {
+                "t": "the {it}detrimental{/it} effects of excessive drinking"
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "quotes": [
+      {
+        "t": "Most everyone now knows the action of pressing mouse keys is far more {qword}deleterious{/qword} to the tender structures of the wrist and hand than typing is.",
+        "aq": {
+          "auth": "Michael Finley",
+          "source": "{it}Albany (New York) Times-Union{/it}",
+          "aqdate": "2 Sept. 1998"
+        }
+      },
+      {
+        "t": "In developing countries, the imposition of boundaries around national parks and protected areas has been {qword}deleterious{/qword} for both people and wildlife.",
+        "aq": {
+          "auth": "Kristin B. Gunther",
+          "source": "{it}Association of American Geographers{/it}",
+          "aqdate": "2002"
+        }
+      },
+      {
+        "t": "This skewed allocation of resources away from those most in need, in turn, insures that many young people from low-income families will continue to be shut out of the economy, with obvious {qword}deleterious{/qword} family and social consequences.",
+        "aq": {
+          "auth": "Iris C. Rotberg",
+          "source": "{it}Education Week{/it}",
+          "aqdate": "9 Mar. 1994"
+        }
+      },
+      {
+        "t": "For as James Keirans pointed out to me, ticks are the world's most notorious carriers of the agents of diseases that strike animals, wild and domestic. And they rank second only to mosquitoes in their {qword}deleterious{/qword} effect on humans.",
+        "aq": {
+          "auth": "Edwards Park",
+          "source": "{it}Smithsonian{/it}",
+          "aqdate": "January 1987"
+        }
+      }
+    ],
+    "et": [
+      [
+        "text",
+        "Greek {it}dēlētērios{/it}, from {it}dēleisthai{/it} to hurt"
+      ]
+    ],
+    "date": "1587",
+    "shortdef": [
+      "harmful often in a subtle or unexpected way"
+    ]
+  }
+]
