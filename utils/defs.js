@@ -54,11 +54,11 @@ const compose = {
   },
   'od': function(res){
     console.log('composing odus');
-    const odus = res;
-    for (let i = 0; i < odus.results.length; i++) {
+    const od = res;
+    for (let i = 0; i < od.results.length; i++) {
       const etyms = [];
       // iterate results
-      const result = odus.results[i];
+      const result = od.results[i];
       if (result.lexicalEntries[0].entries[0].etymologies) {
         for (let j = 0; j < result.lexicalEntries.length; j++) {
           const lexicalEntry = result.lexicalEntries[j];
@@ -75,9 +75,9 @@ const compose = {
           }
         }
       }
-      odus.results[i].etyms = etyms;
+      od.results[i].etyms = etyms;
     }
-    return odus;
+    return od;
   },
   'odgb': function(res) {
 

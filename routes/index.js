@@ -8,6 +8,7 @@ const User = require('../models/user');
 router.get('/', function(req, res, next) {
   User.find({}, (err, allUsers) => {
     res.render('index', {
+      word: req.word,
       user: req.user,
       allUsers: allUsers,
     });
@@ -26,6 +27,27 @@ router.get('/oauth2callback', passport.authenticate(
     failureRedirect: '/',
   }),
 );
+
+router.post('/:lookup', async function(req, res) {
+  console.log(req.body);
+  const lookup = req.body.word;
+  const keys = Object.keys(api.info);
+  const dict = {};
+  for (let a = 0; a < keys.length; a ++) {
+    const key = keys[a];
+    dict[key] = await api.info[key].compose(lookup);
+  }
+  console.log(dict['fd']);
+  res.render('lookup', {
+    info: api.info,
+    mws: dict['mw'],
+    oxfordUS: dict['odus'],
+    oxfordGB: dict['odgb'],
+    fds: dict['fd'],
+    lookup: lookup,
+    user: req.user,
+  });
+});
 
 // router.get('/oauth2callback',
 //   passport.authenticate('google', { failureRedirect: '/login'}),

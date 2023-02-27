@@ -109,12 +109,13 @@ async function show(req, res) {
   const gb = response['odgb'];
   const oxfordGB = defs.compose['od'](gb);
   // const oxfordGB = defs.compose['odgb'](response['odgb']);
-  console.log(response['odus'].results);
+  console.log(oxfordUS);
   // const first = response['odus'].results[0];
   // console.log(first
   // first.newProp = 'hello world';
   // console.log(first);
   res.render('responses/show', {
+    info: api.info,
     oxfordUS: oxfordUS,
     oxfordGB: oxfordGB,
     mws: mws,

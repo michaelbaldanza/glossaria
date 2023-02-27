@@ -1,25 +1,22 @@
 <%- include('./partials/header.ejs') %>
 <div>
-  <h1>Welcome to <%- title %></h1>
-  <p>
-    <% if (user) { %>
-      <a href="/logout">
-        Log out
-      </a>
-    <% } else { %>
-      <a href="/auth/google">
-        Login with Google
-      </a>
-    <% } %>
-  </p>
-  <% if (allUsers) { %>
-    <ul>
-      <% for (let i = 0; i < allUsers.length; i++) { %>
-        <li>
-          <%= allUsers[i].name %> - <%= allUsers[i].email %>
-        </li>
-      <% } %>
-    </ul>
-  <% } %>
+  <div>
+    <h1>Get started by looking up a word.</h1>
+    <p>
+      Begin your Glossi journey by looking up a word.
+    </p>
+    <form method="POST" id="word-form">
+      <div class="mb-3">
+        <label for="word-input" class="form-label">Word</label>
+        <input
+          type="text" class="form-control" id="word-input" name="word"
+          value=""
+        >
+      </div>
+      <button type="submit" class="btn btn-primary" id="sbutton">
+        Submit
+      </button>
+    </form>
+  </div>
 </div>
 <%- include('./partials/footer.ejs') %>

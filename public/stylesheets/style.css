@@ -8,6 +8,7 @@ a {
 
 body {
   background-color: #fdfdfd;
+  /* background-color: purple; */
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -51,7 +52,7 @@ footer {
 }
 
 @media (min-width: 640px) {
-                 
+              
 }
 
 @media (min-width: 768px) {
@@ -61,11 +62,15 @@ footer {
   
   .api-res {
     width: 50%;
-  }       
+  }
+  #nonfooter {
+    max-width: 900px;
+    margin: auto;
+  }
 }
 
 @media (min-width: 1024px) {
-        
+  
 }
 
 @media (min-width: 1200px) {

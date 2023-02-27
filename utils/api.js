@@ -1,21 +1,49 @@
 const util = require('util');
 const fs = require('fs');
+const str = require('../utils/str');
 
 const info = {
   'mw': {
     'name': `Merriam-Webster's Collegiate Dictionary`,
     'link': 'https://dictionaryapi.com/products/json',
+    'cap': function(word) {
+      return word.toUpperCase();
+    },
+    'log': function(word) {
+      console.log(this.cap(word));
+      console.log(`I'm logging ${word}`);
+    },
     'endpoint': function (word) {
       const qs = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/' +
         word + '?key=' + process.env.DICTIONARY_KEY;
       return qs;
-    }
+    },
+    'compose': async function(word) {
+      const apiRes = await get(this.endpoint(word));
+      const mws = []; // array containing all returned merriam-webster's responses
+      // console.log(res);
+      for (let i = 0; i < apiRes.length; i++){
+        const re = apiRes[i];
+        const mw = {};
+        mw.word = str.remColon(re.meta.id);
+        mw.inflections = re.meta.stems;
+        mw.partOfSpeech = re.fl;
+        mw.shortDef = re.shortdef;
+        mws.push(mw);
+      }
+      // console.log(mws);
+      return mws;
+    },
   },
   'fd': {
     'name': 'Free Dictionary',
     'link': 'https://dictionaryapi.dev/',
     'endpoint': function (word) {
       return 'https://api.dictionaryapi.dev/api/v2/entries/en/' + word;
+    },
+    'compose': async function(word) {
+      const apiRes = await get(this.endpoint(word));
+      return apiRes;
     },
   },
   'odus': {
@@ -29,6 +57,10 @@ const info = {
       }
       return [qs, ro];
     },
+    'compose': async function(word) {
+      const comp = await composeOxford(this.endpoint(word));
+      return comp;
+    },
   },
   'odgb': {
     'name': 'Oxford Dictionary, GB',
@@ -40,6 +72,10 @@ const info = {
         headers: {'app_id': process.env.OXFORD_ID, 'app_key': process.env.OXFORD_KEY}
       }
       return [qs, ro];
+    },
+    'compose': async function(word) {
+      const comp = await composeOxford(this.endpoint(word));
+      return comp;
     },
   },
 }
@@ -135,6 +171,33 @@ function readFree(apires) {
     responses.push(response);
   }
   return responses;
+}
+
+async function composeOxford(endpoint){
+  const od = await get(endpoint); // store api res
+  for (let i = 0; i < od.results.length; i++) {
+    const etyms = [];
+    // iterate results
+    const result = od.results[i];
+    if (result.lexicalEntries[0].entries[0].etymologies) {
+      for (let j = 0; j < result.lexicalEntries.length; j++) {
+        const lexicalEntry = result.lexicalEntries[j];
+        if (lexicalEntry.entries[0].etymologies) {
+          for (let l = 0; l < lexicalEntry.entries.length; l++) {
+            const entry = lexicalEntry.entries[l];
+            if (entry.etymologies) {
+              for (let m = 0; m < entry.etymologies.length; m++) {
+                const etym = entry.etymologies[0];
+                etyms.push(etym);
+              }
+            }
+          }
+        }
+      }
+    }
+    od.results[i].etyms = etyms;
+  }
+  return od;
 }
 
 module.exports = {
